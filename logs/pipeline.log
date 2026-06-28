@@ -1,0 +1,213 @@
+2026-06-23 17:40:57,658 | INFO | ============================================================
+2026-06-23 17:40:57,678 | INFO | PIPELINE STARTED
+2026-06-23 17:40:57,678 | INFO | Starting data extraction.
+2026-06-23 17:40:57,679 | INFO | Downloading RELIANCE.NS
+2026-06-23 17:40:59,166 | INFO | Downloading TCS.NS
+2026-06-23 17:40:59,337 | INFO | Downloading INFY.NS
+2026-06-23 17:40:59,654 | INFO | Downloading HDFCBANK.NS
+2026-06-23 17:40:59,842 | INFO | Downloading ICICIBANK.NS
+2026-06-23 17:41:00,086 | INFO | Raw data saved successfully.
+2026-06-23 17:41:00,086 | INFO | Data extraction completed.
+2026-06-23 17:41:00,157 | INFO | Starting data transformation.
+2026-06-23 17:41:00,186 | INFO | Processed data saved successfully.
+2026-06-23 17:41:00,186 | INFO | Transformation completed.
+2026-06-23 17:41:00,334 | INFO | Starting data validation.
+2026-06-23 17:41:00,516 | INFO | Validation completed successfully.
+2026-06-23 17:41:00,516 | INFO | Calculating business metrics.
+2026-06-23 17:41:00,600 | INFO | Analytics completed.
+2026-06-23 17:41:00,600 | INFO | Loading data into SQL Server.
+2026-06-23 17:41:11,449 | INFO | SQL Load Completed.
+2026-06-23 17:41:11,455 | INFO | Summary CSV Exported.
+2026-06-23 17:41:11,499 | INFO | PIPELINE COMPLETED
+2026-06-23 17:41:11,499 | INFO | ============================================================
+2026-06-23 18:22:01,741 | INFO | ============================================================
+2026-06-23 18:22:01,745 | INFO | PIPELINE STARTED
+2026-06-23 18:22:01,745 | INFO | Starting data extraction.
+2026-06-23 18:22:01,745 | INFO | Downloading RELIANCE.NS
+2026-06-23 18:22:03,050 | INFO | Downloading TCS.NS
+2026-06-23 18:22:03,276 | INFO | Downloading INFY.NS
+2026-06-23 18:22:03,557 | INFO | Downloading HDFCBANK.NS
+2026-06-23 18:22:03,907 | INFO | Downloading ICICIBANK.NS
+2026-06-23 18:22:04,229 | INFO | Raw data saved successfully.
+2026-06-23 18:22:04,229 | INFO | Data extraction completed.
+2026-06-23 18:22:04,378 | INFO | Starting data transformation.
+2026-06-23 18:22:04,444 | INFO | Processed data saved successfully.
+2026-06-23 18:22:04,444 | INFO | Transformation completed.
+2026-06-23 18:22:04,495 | INFO | Starting data validation.
+2026-06-23 18:22:04,538 | INFO | Validation completed successfully.
+2026-06-23 18:22:04,538 | INFO | Calculating business metrics.
+2026-06-23 18:22:04,593 | INFO | Analytics completed.
+2026-06-23 18:22:04,593 | INFO | Starting Incremental Load.
+2026-06-23 18:22:08,388 | ERROR | Execution failed on sql 'INSERT INTO "Market_Data" ("Date", "Stock_Name", "Open_Price", "High_Price", "Low_Price", "Close_Price", "Volume", "Daily_Return") VALUES (:Date, :Stock_Name, :Open_Price, :High_Price, :Low_Price, :Close_Price, :Volume, :Daily_Return)': (pyodbc.ProgrammingError) ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'Daily_Return'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'Daily_Return'. (207); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+[SQL: INSERT INTO [Market_Data] ([Date], [Stock_Name], [Open_Price], [High_Price], [Low_Price], [Close_Price], [Volume], [Daily_Return]) VALUES (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ? ... 6598 characters truncated ... , ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (datetime.datetime(2025, 6, 23, 0, 0), 'RELIANCE.NS', 1440.5593915455418, 1451.266970188698, 1429.6535737155343, 1444.326904296875, 5989078, None, datetime.datetime(2025, 6, 24, 0, 0), 'RELIANCE.NS', 1452.4565437947847, 1462.3709229333156, 1430.7440292763747, 1438.378173828125, 16402744, -0.4118687016805178, datetime.datetime(2025, 6, 25, 0, 0), 'RELIANCE.NS', 1451.4652666586912, 1459.7933702625824, 1447.9952335758323, 1454.737060546875, 7525851, 1.1373147212886403, datetime.datetime(2025, 6, 26, 0, 0), 'RELIANCE.NS', 1456.5214458748073, 1485.9672251547677, 1452.55569413543, 1482.4971923828125, 14657893, 1.908257690602988, datetime.datetime(2025, 6, 27, 0, 0), 'RELIANCE.NS', 1486.5620421012081, 1508.9685148979506, 1484.0834473001275, 1502.425048828125, 11117052, 1.3442087140335568, datetime.datetime(2025, 6, 30, 0, 0), 'RELIANCE.NS', 1500.838885203447, 1511.7447031481738, 1483.191240482831, 1487.7518310546875, 8409527, -0.9766355922302017, datetime.datetime(2025, 7, 1, 0, 0), 'RELIANCE.NS' ... 1996 parameters truncated ... 1468351, 0.6073607566565498, datetime.datetime(2025, 7, 1, 0, 0), 'TCS.NS', 3324.1971950415045, 3353.0614253891877, 3284.268343060543, 3299.85498046875, 2375183, -0.932986540548475, datetime.datetime(2025, 7, 2, 0, 0), 'TCS.NS', 3355.1782290195283, 3357.7759628799704, 3290.5223973149878, 3293.697509765625, 3090585, -0.18659822142397253, datetime.datetime(2025, 7, 3, 0, 0), 'TCS.NS', 3300.143541734672, 3305.242935877825, 3268.9702681275116, 3272.049072265625, 2531870, -0.6572685389539701, datetime.datetime(2025, 7, 4, 0, 0), 'TCS.NS', 3278.9765232213795, 3297.257202194738, 3261.7542933055606, 3290.329833984375, 1109320, 0.5586946074158883, datetime.datetime(2025, 7, 7, 0, 0), 'TCS.NS', 3288.8866014623586, 3296.3913481829886, 3279.361264698508, 3282.536376953125, 1639174, -0.23685944645289725, datetime.datetime(2025, 7, 8, 0, 0), 'TCS.NS', 3276.090106685197, 3295.3329266950955, 3264.929177120374, 3277.24462890625, 2325242, -0.16120912121579956)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\sqlalchemy\engine\base.py", line 2127, in _exec_insertmany_context
+    dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~^
+        cursor,
+        ^^^^^^^
+    ...<2 lines>...
+        context,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'Daily_Return'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'Daily_Return'. (207); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\sql.py", line 1679, in execute
+    return execute_function(sql, *args)
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_insertmany_context(dialect, context)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\sqlalchemy\engine\base.py", line 2135, in _exec_insertmany_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e,
+        ^^
+    ...<4 lines>...
+        is_sub_exec=True,
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\sqlalchemy\engine\base.py", line 2365, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\sqlalchemy\engine\base.py", line 2127, in _exec_insertmany_context
+    dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~^
+        cursor,
+        ^^^^^^^
+    ...<2 lines>...
+        context,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (pyodbc.ProgrammingError) ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'Daily_Return'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'Daily_Return'. (207); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+[SQL: INSERT INTO [Market_Data] ([Date], [Stock_Name], [Open_Price], [High_Price], [Low_Price], [Close_Price], [Volume], [Daily_Return]) VALUES (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ? ... 6598 characters truncated ... , ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (datetime.datetime(2025, 6, 23, 0, 0), 'RELIANCE.NS', 1440.5593915455418, 1451.266970188698, 1429.6535737155343, 1444.326904296875, 5989078, None, datetime.datetime(2025, 6, 24, 0, 0), 'RELIANCE.NS', 1452.4565437947847, 1462.3709229333156, 1430.7440292763747, 1438.378173828125, 16402744, -0.4118687016805178, datetime.datetime(2025, 6, 25, 0, 0), 'RELIANCE.NS', 1451.4652666586912, 1459.7933702625824, 1447.9952335758323, 1454.737060546875, 7525851, 1.1373147212886403, datetime.datetime(2025, 6, 26, 0, 0), 'RELIANCE.NS', 1456.5214458748073, 1485.9672251547677, 1452.55569413543, 1482.4971923828125, 14657893, 1.908257690602988, datetime.datetime(2025, 6, 27, 0, 0), 'RELIANCE.NS', 1486.5620421012081, 1508.9685148979506, 1484.0834473001275, 1502.425048828125, 11117052, 1.3442087140335568, datetime.datetime(2025, 6, 30, 0, 0), 'RELIANCE.NS', 1500.838885203447, 1511.7447031481738, 1483.191240482831, 1487.7518310546875, 8409527, -0.9766355922302017, datetime.datetime(2025, 7, 1, 0, 0), 'RELIANCE.NS' ... 1996 parameters truncated ... 1468351, 0.6073607566565498, datetime.datetime(2025, 7, 1, 0, 0), 'TCS.NS', 3324.1971950415045, 3353.0614253891877, 3284.268343060543, 3299.85498046875, 2375183, -0.932986540548475, datetime.datetime(2025, 7, 2, 0, 0), 'TCS.NS', 3355.1782290195283, 3357.7759628799704, 3290.5223973149878, 3293.697509765625, 3090585, -0.18659822142397253, datetime.datetime(2025, 7, 3, 0, 0), 'TCS.NS', 3300.143541734672, 3305.242935877825, 3268.9702681275116, 3272.049072265625, 2531870, -0.6572685389539701, datetime.datetime(2025, 7, 4, 0, 0), 'TCS.NS', 3278.9765232213795, 3297.257202194738, 3261.7542933055606, 3290.329833984375, 1109320, 0.5586946074158883, datetime.datetime(2025, 7, 7, 0, 0), 'TCS.NS', 3288.8866014623586, 3296.3913481829886, 3279.361264698508, 3282.536376953125, 1639174, -0.23685944645289725, datetime.datetime(2025, 7, 8, 0, 0), 'TCS.NS', 3276.090106685197, 3295.3329266950955, 3264.929177120374, 3277.24462890625, 2325242, -0.16120912121579956)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\apoti\OneDrive\Desktop\Market Analysis\load.py", line 107, in load_to_sql
+    new_df.to_sql(
+    ~~~~~~~~~~~~~^
+    
+    
+    ...<7 lines>...
+    
+    
+    )
+    ^
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\generic.py", line 3052, in to_sql
+    return sql.to_sql(
+           ~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<8 lines>...
+        method=method,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\sql.py", line 841, in to_sql
+    return pandas_sql.to_sql(
+           ~~~~~~~~~~~~~~~~~^
+        frame,
+        ^^^^^^
+    ...<9 lines>...
+        **engine_kwargs,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\sql.py", line 2037, in to_sql
+    total_inserted = sql_engine.insert_records(
+        table=table,
+    ...<7 lines>...
+        **engine_kwargs,
+    )
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\sql.py", line 1571, in insert_records
+    return table.insert(chunksize=chunksize, method=method)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\sql.py", line 1122, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\sql.py", line 1014, in _execute_insert
+    result = self.pd_sql.execute(self.table.insert(), data)
+  File "C:\Users\apoti\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\sql.py", line 1681, in execute
+    raise DatabaseError(f"Execution failed on sql '{sql}': {exc}") from exc
+pandas.errors.DatabaseError: Execution failed on sql 'INSERT INTO "Market_Data" ("Date", "Stock_Name", "Open_Price", "High_Price", "Low_Price", "Close_Price", "Volume", "Daily_Return") VALUES (:Date, :Stock_Name, :Open_Price, :High_Price, :Low_Price, :Close_Price, :Volume, :Daily_Return)': (pyodbc.ProgrammingError) ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'Daily_Return'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'Daily_Return'. (207); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+[SQL: INSERT INTO [Market_Data] ([Date], [Stock_Name], [Open_Price], [High_Price], [Low_Price], [Close_Price], [Volume], [Daily_Return]) VALUES (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ? ... 6598 characters truncated ... , ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (datetime.datetime(2025, 6, 23, 0, 0), 'RELIANCE.NS', 1440.5593915455418, 1451.266970188698, 1429.6535737155343, 1444.326904296875, 5989078, None, datetime.datetime(2025, 6, 24, 0, 0), 'RELIANCE.NS', 1452.4565437947847, 1462.3709229333156, 1430.7440292763747, 1438.378173828125, 16402744, -0.4118687016805178, datetime.datetime(2025, 6, 25, 0, 0), 'RELIANCE.NS', 1451.4652666586912, 1459.7933702625824, 1447.9952335758323, 1454.737060546875, 7525851, 1.1373147212886403, datetime.datetime(2025, 6, 26, 0, 0), 'RELIANCE.NS', 1456.5214458748073, 1485.9672251547677, 1452.55569413543, 1482.4971923828125, 14657893, 1.908257690602988, datetime.datetime(2025, 6, 27, 0, 0), 'RELIANCE.NS', 1486.5620421012081, 1508.9685148979506, 1484.0834473001275, 1502.425048828125, 11117052, 1.3442087140335568, datetime.datetime(2025, 6, 30, 0, 0), 'RELIANCE.NS', 1500.838885203447, 1511.7447031481738, 1483.191240482831, 1487.7518310546875, 8409527, -0.9766355922302017, datetime.datetime(2025, 7, 1, 0, 0), 'RELIANCE.NS' ... 1996 parameters truncated ... 1468351, 0.6073607566565498, datetime.datetime(2025, 7, 1, 0, 0), 'TCS.NS', 3324.1971950415045, 3353.0614253891877, 3284.268343060543, 3299.85498046875, 2375183, -0.932986540548475, datetime.datetime(2025, 7, 2, 0, 0), 'TCS.NS', 3355.1782290195283, 3357.7759628799704, 3290.5223973149878, 3293.697509765625, 3090585, -0.18659822142397253, datetime.datetime(2025, 7, 3, 0, 0), 'TCS.NS', 3300.143541734672, 3305.242935877825, 3268.9702681275116, 3272.049072265625, 2531870, -0.6572685389539701, datetime.datetime(2025, 7, 4, 0, 0), 'TCS.NS', 3278.9765232213795, 3297.257202194738, 3261.7542933055606, 3290.329833984375, 1109320, 0.5586946074158883, datetime.datetime(2025, 7, 7, 0, 0), 'TCS.NS', 3288.8866014623586, 3296.3913481829886, 3279.361264698508, 3282.536376953125, 1639174, -0.23685944645289725, datetime.datetime(2025, 7, 8, 0, 0), 'TCS.NS', 3276.090106685197, 3295.3329266950955, 3264.929177120374, 3277.24462890625, 2325242, -0.16120912121579956)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-06-23 18:37:43,095 | INFO | ============================================================
+2026-06-23 18:37:43,098 | INFO | PIPELINE STARTED
+2026-06-23 18:37:43,099 | INFO | Starting data extraction.
+2026-06-23 18:37:43,099 | INFO | Downloading RELIANCE.NS
+2026-06-23 18:37:44,900 | INFO | Downloading TCS.NS
+2026-06-23 18:37:45,094 | INFO | Downloading INFY.NS
+2026-06-23 18:37:45,284 | INFO | Downloading HDFCBANK.NS
+2026-06-23 18:37:45,616 | INFO | Downloading ICICIBANK.NS
+2026-06-23 18:37:46,084 | INFO | Raw data saved successfully.
+2026-06-23 18:37:46,084 | INFO | Data extraction completed.
+2026-06-23 18:37:46,667 | INFO | Starting data transformation.
+2026-06-23 18:37:46,774 | INFO | Processed data saved successfully.
+2026-06-23 18:37:46,775 | INFO | Transformation completed.
+2026-06-23 18:37:47,170 | INFO | Starting data validation.
+2026-06-23 18:37:47,251 | INFO | Validation completed successfully.
+2026-06-23 18:37:47,252 | INFO | Calculating business metrics.
+2026-06-23 18:37:47,402 | INFO | Analytics completed.
+2026-06-23 18:37:47,404 | INFO | Starting Incremental Load.
+2026-06-23 18:38:05,022 | INFO | 1250 rows inserted.
+2026-06-23 18:38:05,027 | INFO | Summary CSV Exported.
+2026-06-23 18:38:05,137 | INFO | PIPELINE COMPLETED
+2026-06-23 18:38:05,138 | INFO | ============================================================
+2026-06-28 15:01:20,125 | INFO | ============================================================
+2026-06-28 15:01:20,127 | INFO | PIPELINE STARTED
+2026-06-28 15:01:20,128 | INFO | Starting data extraction.
+2026-06-28 15:01:20,128 | INFO | Downloading RELIANCE.NS
+2026-06-28 15:01:22,143 | INFO | Downloading TCS.NS
+2026-06-28 15:01:22,368 | INFO | Downloading INFY.NS
+2026-06-28 15:01:22,613 | INFO | Downloading HDFCBANK.NS
+2026-06-28 15:01:22,831 | INFO | Downloading ICICIBANK.NS
+2026-06-28 15:01:23,107 | INFO | Raw data saved successfully.
+2026-06-28 15:01:23,108 | INFO | Data extraction completed.
+2026-06-28 15:01:23,179 | INFO | Starting data transformation.
+2026-06-28 15:01:23,248 | INFO | Processed data saved successfully.
+2026-06-28 15:01:23,253 | INFO | Transformation completed.
+2026-06-28 15:01:23,327 | INFO | Starting data validation.
+2026-06-28 15:01:23,342 | INFO | Validation completed successfully.
+2026-06-28 15:01:23,357 | INFO | Calculating business metrics.
+2026-06-28 15:01:23,460 | INFO | Analytics completed.
+2026-06-28 15:01:23,461 | INFO | Starting Incremental Load.
+2026-06-28 15:01:34,095 | INFO | 1245 rows inserted.
+2026-06-28 15:01:34,101 | INFO | Summary CSV Exported.
+2026-06-28 15:01:34,263 | INFO | PIPELINE COMPLETED
+2026-06-28 15:01:34,264 | INFO | ============================================================
